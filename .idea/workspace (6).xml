@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a326bdbb-8a95-4299-a9d2-d85008bb04cf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2WZX0niTHTGpzDL74yotJqtm3i7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marko/YandexDisk/Яндекс Лицей&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\icw20\YandexDisk\Яндекс Лицей" />
+      <recent name="C:\Users\icw20\YandexDisk\Яндекс Лицей\LOGIKA" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\icw20\YandexDisk\Яндекс Лицей" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-67fca87a943a-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.259" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a326bdbb-8a95-4299-a9d2-d85008bb04cf" name="Changes" comment="" />
+      <created>1696940854770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696940854770</updated>
+      <workItem from="1696940856716" duration="7033000" />
+      <workItem from="1697035244937" duration="7031000" />
+      <workItem from="1697103844038" duration="4402000" />
+      <workItem from="1697108980025" duration="612000" />
+      <workItem from="1697195281419" duration="40000" />
+      <workItem from="1697197757410" duration="1004000" />
+      <workItem from="1697469267551" duration="1468000" />
+      <workItem from="1697550633595" duration="53000" />
+      <workItem from="1697709414302" duration="3476000" />
+      <workItem from="1697740881829" duration="1751000" />
+      <workItem from="1697795983392" duration="4206000" />
+      <workItem from="1697829417440" duration="655000" />
+      <workItem from="1698039504985" duration="21000" />
+      <workItem from="1698039589067" duration="102000" />
+      <workItem from="1698144785436" duration="7517000" />
+      <workItem from="1698229759449" duration="12223000" />
+      <workItem from="1698331792372" duration="4139000" />
+      <workItem from="1698340759834" duration="471000" />
+      <workItem from="1698341308834" duration="191000" />
+      <workItem from="1699298940162" duration="2003000" />
+      <workItem from="1699344154280" duration="2111000" />
+      <workItem from="1699459535752" duration="3730000" />
+      <workItem from="1699470756619" duration="15000" />
+      <workItem from="1699547264250" duration="2873000" />
+      <workItem from="1699607142616" duration="2002000" />
+      <workItem from="1699633584351" duration="960000" />
+      <workItem from="1699720184643" duration="1208000" />
+      <workItem from="1699785725744" duration="2855000" />
+      <workItem from="1699806919147" duration="614000" />
+      <workItem from="1699884796600" duration="12095000" />
+      <workItem from="1699901845092" duration="4208000" />
+      <workItem from="1699970171915" duration="7155000" />
+      <workItem from="1699980768668" duration="351000" />
+      <workItem from="1700056310266" duration="18000" />
+      <workItem from="1700056335403" duration="195000" />
+      <workItem from="1700056541737" duration="67000" />
+      <workItem from="1700071557998" duration="40000" />
+      <workItem from="1700115903332" duration="1000" />
+      <workItem from="1700121009836" duration="1260000" />
+      <workItem from="1700147590312" duration="8331000" />
+      <workItem from="1700296939057" duration="1564000" />
+      <workItem from="1700307615480" duration="599000" />
+      <workItem from="1700755393435" duration="8000" />
+      <workItem from="1700768266540" duration="2718000" />
+      <workItem from="1700851426812" duration="867000" />
+      <workItem from="1700852408842" duration="3000" />
+      <workItem from="1700987425677" duration="7914000" />
+      <workItem from="1701027814679" duration="497000" />
+      <workItem from="1701097217185" duration="3766000" />
+      <workItem from="1701183621967" duration="1242000" />
+      <workItem from="1702219027271" duration="1627000" />
+      <workItem from="1702233038768" duration="22000" />
+      <workItem from="1702233065710" duration="1320000" />
+      <workItem from="1702245619366" duration="4929000" />
+      <workItem from="1702393790016" duration="12000" />
+      <workItem from="1702403203070" duration="17000" />
+      <workItem from="1702777077611" duration="4579000" />
+      <workItem from="1702921549030" duration="7731000" />
+      <workItem from="1702996842347" duration="3297000" />
+      <workItem from="1703192272156" duration="1430000" />
+      <workItem from="1703214655052" duration="10487000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/_$main.coverage" NAME="main Coverage Results" MODIFIED="1702249741978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Знакомство со списками" />
+    <SUITE FILE_PATH="coverage/_$hui.coverage" NAME="hui Coverage Results" MODIFIED="1699466121549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/_$Logika_2.coverage" NAME="Logika_2 Coverage Results" MODIFIED="1699807498357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOGIKA" />
+    <SUITE FILE_PATH="coverage/_$Logika_1.coverage" NAME="Logika_1 Coverage Results" MODIFIED="1699807447439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOGIKA" />
+    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1703241923231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Контрольная работа №1" />
+  </component>
+</project>
