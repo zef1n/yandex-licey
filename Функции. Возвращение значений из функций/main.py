@@ -79,15 +79,70 @@ def print_document(pages):
     else:
         print('Дальнейшие материалы засекречены')
 
+
 # Поиски возвышенного
+def find_mountain(heightsMap):
+    sp = []
+    for i in heightsMap:
+        sp.append(max(i))
+    n = max(sp)
+    for i in range(len(heightsMap)):
+        if n in heightsMap[i]:
+            row = i
+    for i in heightsMap:
+        for k in range(len(i)):
+            if n == i[k]:
+                col = k
+    return row, col
 
 
 # Домашняя работа
 # Месяц/Month
+def month_name(number, language):
+    ru = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь',
+          'октябрь', 'ноябрь', 'декабрь']
+    en = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+          'October', 'November', 'December']
+    if language == 'ru':
+        return ru[number - 1]
+    else:
+        return en[number - 1]
+
 
 # Простые числа
+def prime(number):
+    if number <= 1:
+        return "Составное число"
+    elif number == 2:
+        return "Простое число"
+    elif number % 2 == 0:
+        return "Составное число"
+    else:
+        for i in range(3, int(number ** 0.5) + 1, 2):
+            if number % i == 0:
+                return "Составное число"
+        return "Простое число"
+
 
 # Ход конём
+def possible_turns(cell):
+    x = ord(cell[0]) - ord('A') + 1
+    y = int(cell[1])
+
+    dvigs = [
+        (x - 1, y + 2), (x + 1, y + 2),
+        (x - 2, y + 1), (x + 2, y + 1),
+        (x - 2, y - 1), (x + 2, y - 1),
+        (x - 1, y - 2), (x + 1, y - 2)
+    ]
+
+    is_dvig = [
+        f"{chr(ord('A') + dvig[0] - 1)}{dvig[1]}"
+        for dvig in dvigs
+        if 1 <= dvig[0] <= 8 and 1 <= dvig[1] <= 8
+    ]
+
+    return sorted(is_dvig)
 
 
 # Дополнительные задачи

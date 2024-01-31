@@ -56,6 +56,31 @@ def print_average(arr):
 
 
 # Статистики
+def print_statistics(arr):
+    if not arr:
+        print(0)
+        print(0)
+        print(0)
+        print(0)
+        print(0)
+    else:
+        nel = len(arr)
+        mv = sum(arr) / nel
+        minim = min(arr)
+        maxim = max(arr)
+
+        soort = sorted(arr)
+        ser = nel // 2
+        if nel % 2 == 0:
+            med = (soort[ser - 1] + soort[ser]) / 2
+        else:
+            med = soort[ser]
+
+        print(nel)
+        print(mv)
+        print(minim)
+        print(maxim)
+        print(med)
 
 # Домашняя работа
 # Улыбайтесь, господа!
