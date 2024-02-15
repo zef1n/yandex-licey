@@ -1,25 +1,5 @@
 # Kлассная работа
 # Чеширский указатель
-# Чеширский кот в качестве указателя направления движения — не самый лучший выбор. Но если вам все равно куда идти, подойдет и такой. Главное, не придираться к словам. Иначе это далеко может вас завести. Со словами надо поаккуратней.
-#
-# Напишите программу, которая из предложенных слов выберет те, что находятся внутри заданного диапазона.
-#
-# Формат ввода
-# Вводится строка, в которой все значения разделены пробелами. На первом и последнем местах находятся соответственно слова, означающие начало и конец интервала. Из всех остальных нужно выбрать только те, что попадают внутрь интервала, включая концы, если их рассматривать без учёта регистра.
-#
-# Формат вывода
-# Вывести выбранные слова в произвольном порядке через пробел.
-#
-# Пример 1
-# Ввод	Вывод
-# Fury said to a mouse That he met in the house
-# he
-# Пример 2
-# Ввод	Вывод
-# How I wonder what you're at Twinkle twinkle little bat Up above the world you fly Like a tea-tray in the sky
-# I little Like in
-# Примечания
-# Использовать множественное присваивание и распаковывание коллекции при выводе обязательно!
 # text = input().split()
 # sp = []
 # start, end = text[0].lower(), text[-1].lower()
@@ -64,8 +44,7 @@ def choose_coffee(*args):
 
 
 ingredients = [1, 2, 3]
-print(choose_coffee("Эспрессо", "Капучино", "Маккиато", "Кофе по-венски", "Латте Маккиато", "Кон Панна"))
-print(choose_coffee("Эспрессо", "Капучино", "Маккиато", "Кофе по-венски", "Латте Маккиато", "Кон Панна"))
+
 
 
 # Спамогенератор
@@ -84,8 +63,35 @@ def partial_sums(*args):
         sp.append(sp[i] + args[i])
     return sp
 
-# Занято
 
+# Занято
+def sequence_occupied(**kwargs):
+    max_length = 0
+    max_row = 0
+
+    for row, seats in kwargs.items():
+        current_length = 0
+        max_current_length = 0
+        for seat in seats:
+            if seat == 1:
+                current_length += 1
+                if current_length > max_current_length:
+                    max_current_length = current_length
+            else:
+                current_length = 0
+        if max_current_length > max_length:
+            max_length = max_current_length
+            max_row = int(row)
+
+    return max_length, max_row
+
+
+
+
+places = [[1, 1, 0, 0], [0, 0, 0, 1], [0, 1, 1, 0, 0, 0]]
+data = {'2': [3, 2], '1': [4], '3': [4]}
+print(sequence_occupied(**data))
+print(places)
 # Цезарь
 
 # Дополнительные задачи
