@@ -22,26 +22,38 @@
 # print(min(iter(input, ''), key=lambda tas: (sum(map(int, tas)), -len(tas), int(tas))))
 
 # Средний рост
+# sp = []
+# while True:
+#     number = int(input())
+#     sp.append(int(number))
+#
+# if len(sp) == 0:
+#     print(-1)
+# else:
+#     print(sum(sp) / len(sp))
 
 
 # Ваши комментарии
-import sys
-
-# Лямбда-функция, которая возвращает True, если строка содержит только комментарий
-is_comment_only = lambda line: line.strip().startswith('#')
-
-# Считывание строк из стандартного ввода
-lines = sys.stdin.readlines()
-
-# Подсчет строк, удовлетворяющих условию
-count = sum(map(is_comment_only, lines))
-
-print(count)
 
 
 # Сортировка по делителям
+# sp = list()
+# while (num := int(input())) != 0:
+#     count = 2
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             count += 2
+#     if i * i == num:
+#         count -= 1
+#     sp.append((num, count))
+#
+# sp.sort(key=lambda x: (x[1], x[0]))
+# print(sp)
+
 # Домашняя работа
 # Есть ли 0
+print(any(not all(map(int, x.split())) for x in input().split('\n')))
+
 # Сумма чисел в строке
 # Гематрия по-английски
 # Дополнительные задачи
