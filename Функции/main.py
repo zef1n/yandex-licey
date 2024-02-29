@@ -117,9 +117,19 @@ def golden_ratio(i):
         n += 1
     print(y / x)
 
+
 # Дополнительные задачи
 # Правильная скобочная последовательность
+def bracket_check(test_string):
+    a = test_string.replace('()', '')
+    if '(' in a or ')' in a:
+        print('NO')
+    elif '' in a or '()' in a:
+        print('YES')
 
+
+bracket_check("()")
+bracket_check("(()((")
 # Уравнение прямой
 
 # Таблица квадратов чисел
