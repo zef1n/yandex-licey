@@ -1,4 +1,4 @@
-# Функция для проверки наличия перевёрнутого слова в строке
+# Луна и бездна
 def luna_and_bezdna(line, reversed_w):
     words = line.split()
     for word in words:
@@ -23,6 +23,7 @@ for text in linees:
     print(text)
 
 
+# Я слишком много знаю
 def horror(word, search='Cthulhu'):
     global universe
     found = False
@@ -34,32 +35,3 @@ def horror(word, search='Cthulhu'):
             break
     if not found:
         universe.append(word)
-
-
-universe = ['I', 'saw', 'horror', 'universe', 'contains']
-horror('Squid', search='creature')
-print(universe)
-
-
-def bravery(new_word, creature='Cyclops'):
-    global monsters
-
-    for i, word in enumerate(monsters):
-        if len(set(word.lower()) & set(creature.lower())) >= 2:
-
-            index = len(monsters) // 2 if len(monsters) % 2 == 1 else len(monsters) // 2 + 1
-
-            monsters.insert(index, new_word)
-
-            monsters[i] = new_word
-            return
-
-
-# Примеры использования
-monsters = ['hi', 'squid', 'jelly', 'green', 'Cthulhu', 'body']
-bravery('Calamaris')
-print(monsters)
-
-monsters = ['wave', 'whale', 'fish', 'Dragon', 'pie']
-bravery('Horror', creature='Grass')
-print(monsters)
