@@ -178,7 +178,7 @@ def main():
         else:
             print("Пожалуйста, выберите 1 или 2.")
 
-
+main()
 # Домашняя работа
 # НРЗБРЧВ
 # def translate(text):
