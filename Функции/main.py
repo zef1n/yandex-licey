@@ -82,6 +82,7 @@ def print_statistics(arr):
         print(maxim)
         print(med)
 
+
 # Домашняя работа
 # Улыбайтесь, господа!
 def print_shrug_smile():
@@ -120,24 +121,98 @@ def golden_ratio(i):
 
 # Дополнительные задачи
 # Правильная скобочная последовательность
-def bracket_check(test_string):
-    a = test_string.replace('()', '')
-    if '(' in a or ')' in a:
-        print('NO')
-    elif '' in a or '()' in a:
-        print('YES')
+# def bracket_check(text):
+#     sp = []
+#     for i in text:
+#         if i == '(':
+#             sp.append('(')
+#         elif i == ')':
+#             if not sp or sp[-1] != '(':
+#                 print('NO')
+#                 return
+#             sp.pop()
+#     if not sp:
+#         print('YES')
+#     else:
+#         print('NO')
 
-
-bracket_check("()")
-bracket_check("(()((")
 # Уравнение прямой
+def equation(a, b):
+    x1, y1 = float(a.split(';')[0]), float(a.split(';')[1])
+    x2, y2 = float(b.split(';')[0]), float(b.split(';')[1])
+    if x1 == x2:
+        print(x1)
+    else:
+        if y1 == y2:
+            print(y1)
+        else:
+            k = (y2 - y1) / (x2 - x1)
+            print(k, y2 - k * x2)
 
-# Таблица квадратов чисел
+
+# Таблица квадратов чисел !!!!
+def squared(a, b, k):
+    res = []
+    for i in range(a, b + 1, 10):
+        res.append([])
+        for j in range(i, i + 10):
+            if j ** 2 % k != 0:
+                res[-1].append(j ** 2)
+
 
 # Точка на прямой
+def line(s, t):
+    a = float(s.split('x')[0])
+    b = float(s.split('x')[1])
+    x = float(t.split(';')[0])
+    y = float(t.split(';')[1])
+    print(y == a * x + b)
+
 
 # Крестики-нолики
+def tic_tac_toe(field):
+    lin = (*map("".join, field), *map("".join, zip(*field)),
+           *map("".join, zip(*((k[num], k[-num - 1],) for num, k in enumerate(field)))))
+    pobed = "x win" if "xxx" in lin else "0 win" if "000" in lin else "draw"
+    print(pobed)
+
 
 # Решето Эратосфена
+def eratosthenes(n):
+    sp1 = []
+    sp2 = []
+
+    if n < 4:
+        return
+
+    for i in range(2, n + 1, 1):
+        sp1.append(i)
+
+    while sp1:
+        for i in sp1[1:]:
+            if i % sp1[0] == 0:
+                sp2.append(i)
+                sp1.remove(i)
+        sp1 = sp1[1:]
+
+    for i in sp2:
+        print(i, end=" ")
+
 
 # Длинношеее
+def print_long_words(text):
+    text = text.lower()
+    for i in text:
+        if i not in ' абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz':
+            text = text.replace(i, ' ')
+    text1 = text.split()
+    for z in text1:
+        b = 0
+        for k in z:
+            b += 1 if k in 'аоэиуыеёюяaeiouy' else 0
+        if b >= 4:
+            print(z)
+    return
+
+
+print_long_words('Как и в прочих заданиях этого урока, в вашем решении функция должна быть определена, но не должна вызываться.')

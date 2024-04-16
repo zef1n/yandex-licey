@@ -149,10 +149,54 @@ def possible_turns(cell):
 # Уравнения степени не выше второй
 
 # Палиндромы
+def palindrome(data):
+    data = data.replace(' ', '').lower()
+    return 'Палиндром' if data == data[::-1] else 'Не палиндром'
+
 
 # Числа Каталана
+def catalan(n):
+    c = [0] * (n + 1)
+    c[0] = 1
+    for i in range(1, n + 1):
+        c[i] = sum(c[k] * c[i - k - 1] for k in range(i))
+    return c[n]
+
 
 # Тень, знай своё место
+def make_shades(alley, k):
+    z = len(alley)
+    shades = [False] * z
+    for i in range(z):
+        h = alley[i]
+        if h > 0:
+            if k >= 0:
+                stra = i
+                fin = min(i + k * h, z - 1)
+            else:
+                stra = max(i + k * h, 0)
+                fin = i
+            for j in range(stra, fin + 1):
+                shades[j] = True
+    return shades
+
+
+def calculate_sunny_length(shades):
+    summa = 0
+    for i in shades:
+        summa += 1 if i else 0
+
+    return len(shades) - summa
+
+
+def main():
+    k = int(input())
+    alley = [int(height) for height in input().split()]
+    shades = make_shades(alley, k)
+    print('Обгорел' if calculate_sunny_length(shades) >= 10 else 'Тени достаточно')
+
+
+print(make_shades([0, 0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 3, 0], 1))
 
 # Морской бой
 
