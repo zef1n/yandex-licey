@@ -545,32 +545,55 @@ def correct_coords(row, col):
     return 0 <= row < 8 and 0 <= col < 8
 
 
-board = Board()
-board.field = [([None] * 8) for i in range(8)]
-board.field[6][3] = Pawn(WHITE)
-board.field[7][4] = Rook(BLACK)
-
-print('before:')
-for row in range(7, -1, -1):
-    for col in range(8):
-        char = board.cell(row, col)[1]
-        print(char.replace(' ', '-'), end='')
-    print()
-print()
-
-board.move_and_promote_pawn(6, 3, 7, 4, 'N')
-
-print('after:')
-for row in range(7, -1, -1):
-    for col in range(8):
-        char = board.cell(row, col)[1]
-        print(char.replace(' ', '-'), end='')
-    print()
-
-color = board.get_piece(7, 4).get_color()
-color_str = 'white' if color == WHITE else 'black'
-print(color_str)
 # Таблицы значений функций
+class GENII_YANDEX:
+    def __call__(self, x):
+        return x
+
+
+class SQRT:
+    def __call__(self, x):
+        return x ** 0.5
+
+
+con = {'x': GENII_YANDEX(), 'sqrt_fun': SQRT()}
+
+
+class ILYA:
+    def __init__(self, char_znak, arg1, arg2):
+        self.char_znak = char_znak
+        self.arg1 = arg1
+        self.arg2 = arg2
+
+    def __call__(self, arg):
+        if self.arg1 in con:
+            a = con[self.arg1](arg)
+        else:
+            a = int(self.arg1)
+        b = con[self.arg2](arg)
+        if self.char_znak == '+':
+            return a + b
+        if self.char_znak == '-':
+            return a - b
+        if self.char_znak == '*':
+            return a * b
+        if self.char_znak == '/':
+            return a / b
+        if self.char_znak == '//':
+            return a // b
+
+
+number = int(input())
+for i in range(number):
+    command = input().split()
+    if command[0] == 'define':
+        con[command[1]] = ILYA(command[3], command[2], command[4])
+    if command[0] == 'calculate':
+        sp = command[2:]
+        sp = [int(z) for z in sp]
+        ans = con[command[1]]
+        for k in sp:
+            print(ans(k), end=' ')
 # Домашняя работа
 # Рокировка
 # Преобразования чисел
