@@ -242,9 +242,9 @@ class SimplePlanner(QWidget):
         left_layout.addWidget(self.calendarWidget)
 
         event_name_label = QLabel("Название события")
-        self.eventNameEdit = QLineEdit()
+        self.lineEdit = QLineEdit()
         left_layout.addWidget(event_name_label)
-        left_layout.addWidget(self.eventNameEdit)
+        left_layout.addWidget(self.lineEdit)
 
         time_label = QLabel("Время")
         self.timeEdit = QTimeEdit()
@@ -264,7 +264,7 @@ class SimplePlanner(QWidget):
         self.addEventBtn.clicked.connect(self.add_event)
 
     def add_event(self):
-        event_name = self.eventNameEdit.text()
+        event_name = self.lineEdit.text().strip()
         date = self.calendarWidget.selectedDate()
         time = self.timeEdit.time()
         datetime = QDateTime(date, time)
@@ -275,16 +275,114 @@ class SimplePlanner(QWidget):
             datetime_str = event_datetime.toString("yyyy-MM-dd HH:mm:ss")
             item_text = f"{datetime_str} - {event_name}"
             self.eventList.addItem(item_text)
+            self.lineEdit.clear()
+
+
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     window = SimplePlanner()
+#     window.show()
+#     sys.exit(app.exec())
+# Домашняя работа
+# Записная книжка
+import sys
+from PyQt6.QtWidgets import (
+    QApplication, QWidget, QVBoxLayout, QHBoxLayout,
+    QLineEdit, QPushButton, QListWidget, QLabel
+)
+from PyQt6.QtCore import Qt
+
+
+class MyNotes(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Записная книжка")
+        self.setFixedSize(400, 300)
+
+        main_layout = QVBoxLayout()
+
+        input_layout = QHBoxLayout()
+
+        name_label = QLabel("Имя:")
+        self.contactName = QLineEdit()
+        self.contactName.setPlaceholderText("Введите имя")
+        input_layout.addWidget(name_label)
+        input_layout.addWidget(self.contactName)
+
+        phone_label = QLabel("Телефон:")
+        self.contactNumber = QLineEdit()
+        self.contactNumber.setPlaceholderText("Введите номер телефона")
+        input_layout.addWidget(phone_label)
+        input_layout.addWidget(self.contactNumber)
+
+        main_layout.addLayout(input_layout)
+
+        self.addContactBtn = QPushButton("Добавить")
+        self.addContactBtn.clicked.connect(self.add_contact)
+        main_layout.addWidget(self.addContactBtn)
+
+        self.contactList = QListWidget()
+        main_layout.addWidget(self.contactList)
+
+        self.setLayout(main_layout)
+
+    def add_contact(self):
+        name = self.contactName.text().strip()
+        number = self.contactNumber.text().strip()
+
+        if name and number:
+            contact = f"{name} {number}"
+            self.contactList.addItem(contact)
+            self.contactName.clear()
+            self.contactNumber.clear()
+        else:
+
+            pass
+
+
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     window = MyNotes()
+#     window.show()
+#     sys.exit(app.exec())
+
+# Widget Art
+import sys
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout
+from PyQt6.QtCore import Qt
+
+
+class WidgetArt(QWidget):
+    def __init__(self, mat):
+        super().__init__()
+        self.setWindowTitle("Widget Art")
+        self.widgetArt = QGridLayout()
+        self.setLayout(self.widgetArt)
+
+        for i, row in enumerate(mat):
+            for j, cell in enumerate(row):
+                btn = QPushButton("*" if cell == 1 else "")
+                btn.setFixedSize(40, 40)
+                btn.setEnabled(False)
+                self.widgetArt.addWidget(btn, i, j)
 
 
 if __name__ == '__main__':
+    matrix = [
+        [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1],
+        [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
+        [0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+        [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+        [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+        [0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+        [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
+        [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1],
+    ]
     app = QApplication(sys.argv)
-    window = SimplePlanner()
-    window.show()
+    art = WidgetArt(matrix)
+    art.show()
     sys.exit(app.exec())
-# Домашняя работа
-# Записная книжка
-# Widget Art
+
 # Псевдоним. Возвращение
 # Дополнительные задачи
 # Антиплагиат v0.0001
